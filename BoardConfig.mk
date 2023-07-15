@@ -53,7 +53,7 @@ BUILD_BROKEN_DUP_RULES := true
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=1 earlycon=msm_geni_serial,0x4a90000 loop.max_part=7 cgroup.memory=nokmem,nosocket androidboot.usbcontroller=4e00000.dwc3 printk.devkmsg=on firmware_class.path=/vendor/firmware_mnt/image
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE          := 0x00000000
@@ -66,12 +66,12 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     DTC=$(OUT_DIR)/../device/lenovo/moba/dtc/dtc
 
 TARGET_PREBUILT_DTB := $(LOCAL_PATH)/prebuilt/dtb.img
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image.gz
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/Image
 BOARD_PREBUILT_DTBOIMAGE := $(LOCAL_PATH)/prebuilt/dtbo.img
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_VERSION := 4.19
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := r328903
